@@ -1,0 +1,55 @@
+<!doctype html>
+<html ng-app="plunker">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+    <script src="http://code.angularjs.org/1.2.4/angular-route.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+    <script src="example.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="hello.js"></script>
+    <style>
+        .left-nav,.right-nav{
+            float:left;
+        }
+        .right-nav{
+            margin-left:20px;
+        }
+        a{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body ng-controller="MainCntrlCustomer">
+
+
+
+
+<div ng-controller="ModalCtrl" class="container">
+    <div>Some Content</div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-click="showModal(client.id,client.first_name,client.last_name,client.email)" class="clientRow" ng-repeat="client in clients">
+            <td>{{client.id}}</td>
+            <td>{{client.first_name}}</td>
+            <td>{{client.last_name}}</td>
+            <td>{{client.email}}</td>
+
+
+        </tr>
+
+        </tbody>
+
+    </table>
+</div>
+
+</body>
+</html>

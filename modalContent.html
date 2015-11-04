@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h1>ClientInfo</h1>
+    <h1>{{item.id}}</h1>
+    <h1>{{item.first_name}}</h1>
+<h1>{{item.last_name}}</h1>
+    <h1>{{item.email}}</h1>
+    Id:<input type="text" ng-model="item.id" value="{{item.id}}"/>
+    FirstName:<input type="text" ng-model="item.first_name" value="{{item.first_name}}"/>
+    LastName:<input type="text" ng-model="item.last_name" value="{{item.last_name}}"/>
+    Email:<input type="text" ng-model="item.email" value="{{item.email}}"/>
+
+</div>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary"   ng-click="putClientEdit(client.id)" >EDIT</button>
+    <button class="btn btn-primary"  ng-click="deleteClient(client.id)" >DELETE</button>
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
